@@ -20,9 +20,9 @@ El servicio persiste los datos en una base de datos H2 en memoria y utiliza toke
 
 ## Configuración
 
-1. Clona el repositorio desde [GitHub](https://github.com/tu-usuario/tu-repo) o descarga el código fuente.
+1. Clona el repositorio desde [GitHub](https://github.com/MauroGomezDev/nisum/tree/main) o descarga el código fuente.
 
-2. Asegúrate de tener Java 17 instalado en tu sistema.
+2. Asegúrate de tener Java 1.8 instalado en tu sistema.
 
 3. Edita el archivo `application.properties` para configurar la base de datos y otras propiedades según tus necesidades.
    Actualmente tiene configurada una base de datos H2.
@@ -36,10 +36,9 @@ java -jar desafio-0.0.1-SNAPSHOT.jar
 
 
 ** Si el comando se ejecuta correctamente debe mostrar un los similar al siguiente:
-2023-11-26T12:12:08.303-03:00  INFO 45328 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-11-26T12:12:08.804-03:00  WARN 45328 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-11-26T12:12:09.258-03:00  INFO 45328 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2023-11-26T12:12:09.289-03:00  INFO 45328 --- [           main] c.neoris.desafio.EvaluacionApplication   : Started EvaluacionApplication in 6.429 seconds (process running for 7.187)
+2023-11-29 17:02:59.757  WARN 81688 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-11-29 17:03:00.610  INFO 81688 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-11-29 17:03:00.942  INFO 81688 --- [           main] com.nisum.desafio.DesafioApplication     : Started DesafioApplication in 7.712 seconds (JVM running for 8.424)
 
 La aplicación se ejecutará en http://localhost:8080.
 
@@ -62,8 +61,10 @@ Validará el formato del correo electrónico y la contraseña.
 Retorna un usuario con los campos id, created date, modified date, lastLogin, token y isActive.
 
 ## Prueba de integración
-Se agrego en este mismo repositorio la coleccion de endpoints para ser importdado en postman.
-Nombre archivo: neoris.postman_collection.json
+Se implemento swagger para la documentacion de la API.
+
+Ademas, Se agrego en este mismo repositorio la coleccion de endpoints para ser importdado en postman.
+Nombre archivo: nisum.postman_collection.json
 
 ** Ejemplo de solicitud POST para crear un usuario:
 
